@@ -1,3 +1,8 @@
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![](https://tokei.rs/b1/github/JakeB1998/aveona-utility-library?category=code)
+![](https://tokei.rs/b1/github/JakeB1998/aveona-utility-library?category=files)
+
 # Aveona: A Utility Library For Java
 This is my custom coded Utility API for java. using advanced API coding techniques such as type parameters I have coded multiple classes that can be utilized to assist in other programs. If you would like to contribute please email me at jake.botka@gmail.com
 

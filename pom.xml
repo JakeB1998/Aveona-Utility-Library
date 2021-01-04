@@ -3,9 +3,8 @@
   <groupId>org.botka.aveona</groupId>
   <artifactId>utility-library-core</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <modules>
-  <module>Logger-API</module>
-  </modules>
+  <packaging>jar</packaging>
+
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -38,5 +37,5 @@
 	</dependency>
   	
   </dependencies>
-  <packaging>pom</packaging>
+  
 </project>
