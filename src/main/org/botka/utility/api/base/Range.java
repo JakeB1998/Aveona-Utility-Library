@@ -38,7 +38,7 @@ public class Range<T extends Comparable<T>> {
 	 * 
 	 * @return
 	 */
-	public T getLowBoud() {
+	public T getLowBound() {
 		return mLow;
 	}
 	
@@ -60,5 +60,13 @@ public class Range<T extends Comparable<T>> {
 			return value.compareTo(mLow) >= 0 && value.compareTo(mHigh) <= 0;
 		}
 		return false;
+	}
+
+	/**
+	 * @return
+	 */
+	@Override
+	public String toString() {
+		return "Range [mLow=" + mLow + ", mHigh=" + mHigh + "]";
 	}
 }

@@ -10,7 +10,7 @@ package main.org.botka.utility.api.io.readers;
  * @author Jake Botka
  *
  */
-public class SpecializedReader extends Reader {
+public class SpecializedReader extends AbstractReader {
 
 	/**
 	 *

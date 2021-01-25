@@ -14,7 +14,7 @@ import java.util.Vector;
 
 import main.org.botka.utility.api.io.readers.BaseReader;
 import main.org.botka.utility.api.io.readers.FileReader;
-import main.org.botka.utility.api.io.readers.Reader;
+
 import main.org.botka.utility.api.util.ArrayUtil;
 
 /**

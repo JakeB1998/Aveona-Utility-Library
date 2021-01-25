@@ -9,6 +9,7 @@ package main.org.botka.utility.api.util;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.util.List;
 
 import org.eclipse.jdt.annotation.NonNull;
 
@@ -80,6 +81,22 @@ public final class Util {
 
 	public static boolean isNull(Object obj) {
 		return obj == null;
+	}
+	
+	public static String stringifyLines(String[] lines) {
+		if (lines != null) {
+			final StringBuilder strBuilder = new StringBuilder("");
+			for (String line : lines) {
+				//Use value off to stringify nulls
+				strBuilder.append(String.valueOf(line));
+			}
+			return strBuilder.toString();
+		}
+		return null;
+	}
+	
+	public static String stringifyLines(List<String> lines) {
+		return lines != null ? stringifyLines(lines.toArray(new String[0])) : null;
 	}
 
 	/**
@@ -513,5 +530,7 @@ public final class Util {
 
 		}
 	}
+
+	
 
 }

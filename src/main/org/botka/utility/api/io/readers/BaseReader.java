@@ -8,7 +8,10 @@
  */
 package main.org.botka.utility.api.io.readers;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.io.Reader;
 import java.util.Scanner;
 
 /**
@@ -17,26 +20,24 @@ import java.util.Scanner;
  * @author Jake Botka
  *
  */
-public abstract class BaseReader extends Reader {
+public abstract class BaseReader extends AbstractReader {
 
-	private Scanner mScanner;
-
-	/**
-	 * 
-	 */
-	public BaseReader(Scanner scanner) {
-		this.mScanner = scanner;
+	
+	private Reader mReader;
+	private InputStream mInputStream;
+	private BufferedReader mBufferedReader;
+	
+	public BaseReader(java.io.Reader reader) {
+		this(new BufferedReader(reader));
+		mReader = reader;
 	}
-
-	public Scanner getScanner() {
-		return this.mScanner;
+	
+	public BaseReader(BufferedReader bufferedReader) {
+		mBufferedReader = bufferedReader;
 	}
-
-	protected void setScanner(Scanner scan) {
-		this.mScanner = scan;
-	}
-
-	public abstract String quickRead(Scanner scanner);
+	
+	
+	public abstract String quickRead(InputStream inputStream);
 
 	public abstract String readEntire();
 
@@ -79,5 +80,9 @@ public abstract class BaseReader extends Reader {
 	public abstract boolean hasNextByte();
 
 	public abstract void resetReader();
+	
+	public boolean isReadable() {
+		return mReader != null;
+	}
 
 }

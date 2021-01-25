@@ -104,12 +104,10 @@ public class LoggerTests {
 				+ "I'm done, want to kick back, and enjoy the end of a movie, so I close the lid of my laptop- now everything moves onto the 2nd external monitor as if it was the single primary monitor."
 				+ " I just want it to stay the same. As if I had only turned one monitor off.", true));
 		FileLogger logger = (FileLogger)this.mFileLogger;
-		System.out.println(logger.getFile().toPath());
-		System.out.println(new Log<>("This is the second log", true).getEntireLogAsString());
+		
 	}
 	
-	@
-	Test
+	@Test
 	public void synchronizedLogTests() {
 		final SynchronizedLogHistoryRecorder record = new SynchronizedLogHistoryRecorder();
 		final ExecutorService executorService = Executors.newFixedThreadPool(20);
