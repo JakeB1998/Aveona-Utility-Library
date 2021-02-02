@@ -10,12 +10,15 @@
  */
 package main.org.botka.utility.api.util;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import main.org.botka.utility.api.exceptions.IllegalNullArguementException;
 import main.org.botka.utility.api.exceptions.NotImplementedYetException;
-import main.org.botka.utility.api.logger.ConsoleLogger;
+
 
 /**
  * Utility class with static methods pertaining to operations done on the array data structure.
@@ -25,6 +28,26 @@ import main.org.botka.utility.api.logger.ConsoleLogger;
  */
 public class ArrayUtil {
 
+   public static int[] append(int[] arr, int appendedValue) {
+		if (arr != null) {
+			int[] newArr = Arrays.copyOf(arr, arr.length + 1);
+			newArr[newArr.length - 1] = appendedValue;
+		}
+		return null;
+	}
+	
+	public static int[] append(int[] arr, int[] appendedValues) {
+		if (arr != null && appendedValues != null) {
+			int[] newArr = Arrays.copyOf(arr, arr.length + appendedValues.length);
+			for (int i = 0; i < appendedValues.length; i++) {
+				newArr[i + arr.length] = appendedValues[i];
+			}
+			return newArr;
+		}
+		
+		return null;
+	}
+	
 	public static  byte[] copy(@NonNull byte[] arr, int amount) {
 		return copy(arr,0,amount);
 	}

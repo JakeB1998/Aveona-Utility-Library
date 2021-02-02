@@ -35,7 +35,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import main.org.botka.utility.api.base.RandomGenerator;
-import main.org.botka.utility.api.logger.Logger.Console;
+
 import test.NodeTransferTests.MinerNode.Manager;
 
 /**

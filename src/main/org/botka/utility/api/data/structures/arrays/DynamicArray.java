@@ -11,7 +11,6 @@ package main.org.botka.utility.api.data.structures.arrays;
 import java.io.Serializable;
 import java.util.Vector;
 
-import main.org.botka.utility.api.logger.ConsoleLogger;
 import main.org.botka.utility.api.util.ArrayUtil;
 
 /**

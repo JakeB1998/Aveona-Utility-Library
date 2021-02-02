@@ -14,8 +14,7 @@ import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-import main.org.botka.utility.api.logger.ConsoleLogger;
-import main.org.botka.utility.api.logger.Logger;
+
 import main.org.botka.utility.api.network.Client;
 import main.org.botka.utility.api.network.Host;
 import main.org.botka.utility.api.network.server.ClientConnectedListener;
